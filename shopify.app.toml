@@ -2,7 +2,7 @@
 
 client_id = "a7c0d55183462fa5c780e7daf6b0d777"
 name = "wl-qrScan"
-application_url = "https://example.com"
+application_url = "https://wonderful-enjoyment-production-fa56.up.railway.app"
 embedded = true
 
 [build]
@@ -25,4 +25,4 @@ api_version = "2026-04"
 scopes = "write_products,read_discounts"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [ "https://wonderful-enjoyment-production-fa56.up.railway.app/auth/callback" ]
