@@ -1,23 +1,24 @@
 FROM node:20-alpine
 RUN apk add --no-cache openssl
 
-EXPOSE 8080
-
 WORKDIR /app
 
 COPY package.json package-lock.json* ./
 
-# Install ALL deps (including devDependencies) so vite is available for the build
-RUN npm ci && npm cache clean --force
+# Install ALL deps including devDependencies (needed for build)
+RUN npm ci
 
 COPY . .
 
-# Build the app
+# Generate Prisma client at build time
+RUN npx prisma generate
+
+# Build the React Router app
 RUN npm run build
 
-# Remove devDependencies after build to keep image lean
-RUN npm prune --omit=dev
-
 ENV NODE_ENV=production
+ENV PORT=8080
+EXPOSE 8080
 
-CMD ["npm", "run", "docker-start"]
+# At runtime: sync DB schema then start the server
+CMD ["sh", "-c", "npx prisma db push && npx react-router-serve ./build/server/index.js"]
