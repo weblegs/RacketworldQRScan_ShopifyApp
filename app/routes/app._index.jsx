@@ -82,7 +82,7 @@ export default function Index() {
 
   return (
     <s-page heading="Weblegs Discount QR Scan Code">
-      
+      <s-section>
         <s-stack direction="block" gap="base">
           <div>
             <label
@@ -133,7 +133,7 @@ export default function Index() {
             </s-stack>
           )}
         </s-stack>
-      
+      </s-section>
     </s-page>
   );
 }
