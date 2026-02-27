@@ -104,7 +104,6 @@ export default function Index() {
                 border: "1px solid #c9cccf",
                 fontSize: "14px",
                 width: "100%",
-                maxWidth: "400px",
                 background: "#fff",
               }}
             >
