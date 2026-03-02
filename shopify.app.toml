@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "a7c0d55183462fa5c780e7daf6b0d777"
-name = "wl-qrScan"
+name = "Weblegs QR Scan"
 application_url = "https://wonderful-enjoyment-production-fa56.up.railway.app"
 embedded = true
 
