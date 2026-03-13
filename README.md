@@ -45,7 +45,8 @@ Shopify automatically applies the discount when the customer lands on that URL. 
 |----------|-----------|
 | Framework | React Router v7 (Node.js) |
 | Shopify Integration | Shopify Admin GraphQL API |
-| Session Storage | Prisma + SQLite |
+| Database | PostgreSQL (hosted on Railway) |
+| ORM | Prisma |
 | QR Code Generation | QuickChart QR API |
 | UI | Shopify Polaris Web Components |
 | Build Tool | Vite |
@@ -80,6 +81,7 @@ prisma/
 
 ## Hosting & Deployment
 
+- **App URL:** `https://wonderful-enjoyment-production-fa56.up.railway.app`
+- **Database:** PostgreSQL on Railway
+- **Deploy:** Push to `main` branch on GitHub → Railway auto-deploys
 - **Store:** `racketworlduk.myshopify.com`
-- **Deploy:** Push to `main` branch on GitHub
-- **Database:** SQLite (single instance)
